@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DFG-mY-WKg">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,114 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TheApiAwakens" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="STT-bQ-dn8">
+                                <rect key="frame" x="16" y="80" width="343" height="167"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                                <inset key="titleEdgeInsets" minX="-100" minY="110" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="95" minY="0.0" maxX="0.0" maxY="20"/>
+                                <state key="normal" title="Characters" image="icon-characters">
+                                    <color key="titleColor" red="0.4811691642" green="0.8115724325" blue="0.9869298339" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" red="0.4811691642" green="0.8115724325" blue="0.9869298339" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0pa-wf-qlX">
+                                <rect key="frame" x="16" y="249" width="343" height="166.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                                <inset key="titleEdgeInsets" minX="-100" minY="110" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="70" minY="0.0" maxX="0.0" maxY="30"/>
+                                <state key="normal" title="Vehicles" image="icon-vehicles">
+                                    <color key="titleColor" red="0.4811691642" green="0.8115724325" blue="0.9869298339" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" red="0.4811691642" green="0.8115724325" blue="0.9869298339" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2m4-Kj-xV7">
+                                <rect key="frame" x="16" y="247" width="343" height="2"/>
+                                <color key="backgroundColor" red="0.24313725490196078" green="0.25490196078431371" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="EIH-7n-Brr"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ekj-63-N6p">
+                                <rect key="frame" x="16" y="415.5" width="343" height="2"/>
+                                <color key="backgroundColor" red="0.24313725489999999" green="0.25490196079999999" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="W2f-uj-hjA"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="2" id="o4d-sU-DWj"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PfU-3u-FoL">
+                                <rect key="frame" x="16" y="417.5" width="343" height="167"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                                <inset key="titleEdgeInsets" minX="-100" minY="110" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="80" minY="0.0" maxX="0.0" maxY="30"/>
+                                <state key="normal" title="Starships" image="icon-starships">
+                                    <color key="titleColor" red="0.4811691642" green="0.8115724325" blue="0.9869298339" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" red="0.4811691642" green="0.8115724325" blue="0.9869298339" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1019607843" green="0.12549019610000001" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0pa-wf-qlX" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.25" id="0b0-GD-mhk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="STT-bQ-dn8" secondAttribute="trailing" constant="16" id="3PN-AL-cRo"/>
+                            <constraint firstItem="PfU-3u-FoL" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.25" id="4Am-ve-yDC"/>
+                            <constraint firstItem="STT-bQ-dn8" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.25" id="4QT-Jq-1vc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0pa-wf-qlX" secondAttribute="trailing" constant="16" id="99K-fJ-jjY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2m4-Kj-xV7" secondAttribute="trailing" constant="16" id="9KM-xD-XVg"/>
+                            <constraint firstItem="2m4-Kj-xV7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="A2t-pz-GYK"/>
+                            <constraint firstItem="2m4-Kj-xV7" firstAttribute="top" secondItem="STT-bQ-dn8" secondAttribute="bottom" id="CVo-WX-UiA"/>
+                            <constraint firstItem="Ekj-63-N6p" firstAttribute="top" secondItem="0pa-wf-qlX" secondAttribute="bottom" id="H5Q-tG-W26"/>
+                            <constraint firstItem="PfU-3u-FoL" firstAttribute="top" secondItem="Ekj-63-N6p" secondAttribute="bottom" id="I2A-fy-B33"/>
+                            <constraint firstItem="PfU-3u-FoL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Jgc-lm-89e"/>
+                            <constraint firstItem="STT-bQ-dn8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Nb5-zc-Wvm"/>
+                            <constraint firstItem="STT-bQ-dn8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="WOt-qo-Ga5"/>
+                            <constraint firstAttribute="trailing" secondItem="Ekj-63-N6p" secondAttribute="trailing" constant="16" id="YJk-27-Oaq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PfU-3u-FoL" secondAttribute="trailing" constant="16" id="jRl-45-MpG"/>
+                            <constraint firstItem="0pa-wf-qlX" firstAttribute="top" secondItem="2m4-Kj-xV7" secondAttribute="bottom" id="jRl-ez-pc4"/>
+                            <constraint firstItem="0pa-wf-qlX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="oec-xo-vhm"/>
+                            <constraint firstItem="Ekj-63-N6p" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="qKo-rc-ISx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Ukr-wV-cWS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="800.79999999999995" y="-564.46776611694156"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TyV-hL-Gbx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DFG-mY-WKg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8M5-v9-3Xp">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="kTP-3y-1et"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k6U-Pg-Xb8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-55.200000000000003" y="-564.46776611694156"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon-characters" width="100" height="100"/>
+        <image name="icon-starships" width="100" height="100"/>
+        <image name="icon-vehicles" width="100" height="100"/>
+    </resources>
 </document>

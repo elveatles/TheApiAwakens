@@ -54,14 +54,38 @@
 		099CFD942187D64300DAA3BB /* TheApiAwakens */ = {
 			isa = PBXGroup;
 			children = (
+				099CFDA92187E46F00DAA3BB /* Views */,
+				099CFDA82187E44100DAA3BB /* Models */,
+				099CFDA72187E43900DAA3BB /* Controllers */,
 				099CFD952187D64300DAA3BB /* AppDelegate.swift */,
-				099CFD972187D64300DAA3BB /* ViewController.swift */,
 				099CFD992187D64300DAA3BB /* Main.storyboard */,
 				099CFD9C2187D64400DAA3BB /* Assets.xcassets */,
 				099CFD9E2187D64400DAA3BB /* LaunchScreen.storyboard */,
 				099CFDA12187D64400DAA3BB /* Info.plist */,
 			);
 			path = TheApiAwakens;
+			sourceTree = "<group>";
+		};
+		099CFDA72187E43900DAA3BB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				099CFD972187D64300DAA3BB /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		099CFDA82187E44100DAA3BB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		099CFDA92187E46F00DAA3BB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
