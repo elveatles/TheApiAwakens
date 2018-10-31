@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0937F57C2189229300A616C4 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0937F57B2189229300A616C4 /* Person.swift */; };
+		0937F57E2189230200A616C4 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0937F57D2189230200A616C4 /* Planet.swift */; };
+		0937F580218924F300A616C4 /* Starship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0937F57F218924F300A616C4 /* Starship.swift */; };
+		0937F582218926FB00A616C4 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0937F581218926FB00A616C4 /* Vehicle.swift */; };
 		099CFD962187D64300DAA3BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CFD952187D64300DAA3BB /* AppDelegate.swift */; };
 		099CFD982187D64300DAA3BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CFD972187D64300DAA3BB /* ViewController.swift */; };
 		099CFD9B2187D64300DAA3BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 099CFD992187D64300DAA3BB /* Main.storyboard */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0937F57B2189229300A616C4 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		0937F57D2189230200A616C4 /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
+		0937F57F218924F300A616C4 /* Starship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starship.swift; sourceTree = "<group>"; };
+		0937F581218926FB00A616C4 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		099CFD922187D64300DAA3BB /* TheApiAwakens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheApiAwakens.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		099CFD952187D64300DAA3BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		099CFD972187D64300DAA3BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +88,10 @@
 		099CFDA82187E44100DAA3BB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0937F57B2189229300A616C4 /* Person.swift */,
+				0937F57D2189230200A616C4 /* Planet.swift */,
+				0937F57F218924F300A616C4 /* Starship.swift */,
+				0937F581218926FB00A616C4 /* Vehicle.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -164,7 +176,11 @@
 			files = (
 				099CFD982187D64300DAA3BB /* ViewController.swift in Sources */,
 				099CFDAD2188FCC200DAA3BB /* StatsController.swift in Sources */,
+				0937F57C2189229300A616C4 /* Person.swift in Sources */,
+				0937F580218924F300A616C4 /* Starship.swift in Sources */,
+				0937F582218926FB00A616C4 /* Vehicle.swift in Sources */,
 				099CFD962187D64300DAA3BB /* AppDelegate.swift in Sources */,
+				0937F57E2189230200A616C4 /* Planet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
