@@ -9,7 +9,11 @@
 import Foundation
 
 /// A Planet resource is a large mass, planet or planetoid in the Star Wars Universe, at the time of 0 ABY.
-struct Planet: Codable {
+struct Planet: Codable, Resource {
     /// The name of this planet.
     let name: String
+    
+    init(name: String) {
+        self.name = name
+    }
 }

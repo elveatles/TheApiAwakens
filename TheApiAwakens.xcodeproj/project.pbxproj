@@ -11,12 +11,30 @@
 		0937F57E2189230200A616C4 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0937F57D2189230200A616C4 /* Planet.swift */; };
 		0937F580218924F300A616C4 /* Starship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0937F57F218924F300A616C4 /* Starship.swift */; };
 		0937F582218926FB00A616C4 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0937F581218926FB00A616C4 /* Vehicle.swift */; };
+		0937F584218929F200A616C4 /* Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0937F583218929F200A616C4 /* Stub.swift */; };
+		0937F58721892C2A00A616C4 /* people.json in Resources */ = {isa = PBXBuildFile; fileRef = 0937F58621892C2A00A616C4 /* people.json */; };
+		0937F58921892C8100A616C4 /* starships.json in Resources */ = {isa = PBXBuildFile; fileRef = 0937F58821892C8100A616C4 /* starships.json */; };
+		0937F58B21892CBC00A616C4 /* vehicles.json in Resources */ = {isa = PBXBuildFile; fileRef = 0937F58A21892CBC00A616C4 /* vehicles.json */; };
+		0937F58D218955CC00A616C4 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0937F58C218955CC00A616C4 /* Category.swift */; };
+		0937F58F2189587700A616C4 /* CategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0937F58E2189587700A616C4 /* CategoryController.swift */; };
+		0937F592218A23C100A616C4 /* ResourcePickerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0937F591218A23C100A616C4 /* ResourcePickerDataSource.swift */; };
+		0937F594218A241900A616C4 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0937F593218A241900A616C4 /* Resource.swift */; };
+		0937F59A218A36BE00A616C4 /* PersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0937F599218A36BE00A616C4 /* PersonViewModel.swift */; };
+		0937F59F218A578300A616C4 /* StarshipViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0937F59E218A578300A616C4 /* StarshipViewModel.swift */; };
+		0937F5A9218A664500A616C4 /* MeasurableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0937F5A8218A664500A616C4 /* MeasurableViewModel.swift */; };
+		0937F5AB218A75F300A616C4 /* Measurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0937F5AA218A75F300A616C4 /* Measurable.swift */; };
+		0937F5AD218A7E7200A616C4 /* Priceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0937F5AC218A7E7200A616C4 /* Priceable.swift */; };
+		0937F5AF218A7F3900A616C4 /* PriceableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0937F5AE218A7F3900A616C4 /* PriceableViewModel.swift */; };
+		0937F5B1218A839100A616C4 /* VehicleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0937F5B0218A839100A616C4 /* VehicleViewModel.swift */; };
+		0937F5B4218AB82300A616C4 /* NumberTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0937F5B3218AB82300A616C4 /* NumberTextFieldDelegate.swift */; };
 		099CFD962187D64300DAA3BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CFD952187D64300DAA3BB /* AppDelegate.swift */; };
 		099CFD982187D64300DAA3BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CFD972187D64300DAA3BB /* ViewController.swift */; };
 		099CFD9B2187D64300DAA3BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 099CFD992187D64300DAA3BB /* Main.storyboard */; };
 		099CFD9D2187D64400DAA3BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 099CFD9C2187D64400DAA3BB /* Assets.xcassets */; };
 		099CFDA02187D64400DAA3BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 099CFD9E2187D64400DAA3BB /* LaunchScreen.storyboard */; };
 		099CFDAD2188FCC200DAA3BB /* StatsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CFDAC2188FCC200DAA3BB /* StatsController.swift */; };
+		09E622A8218B716D00CFD5DC /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E622A7218B716D00CFD5DC /* UITextFieldExtension.swift */; };
+		09E622AE218B79BE00CFD5DC /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E622AD218B79BE00CFD5DC /* KeyboardManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +42,22 @@
 		0937F57D2189230200A616C4 /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
 		0937F57F218924F300A616C4 /* Starship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starship.swift; sourceTree = "<group>"; };
 		0937F581218926FB00A616C4 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		0937F583218929F200A616C4 /* Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stub.swift; sourceTree = "<group>"; };
+		0937F58621892C2A00A616C4 /* people.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = people.json; sourceTree = "<group>"; };
+		0937F58821892C8100A616C4 /* starships.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = starships.json; sourceTree = "<group>"; };
+		0937F58A21892CBC00A616C4 /* vehicles.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = vehicles.json; sourceTree = "<group>"; };
+		0937F58C218955CC00A616C4 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		0937F58E2189587700A616C4 /* CategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryController.swift; sourceTree = "<group>"; };
+		0937F591218A23C100A616C4 /* ResourcePickerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcePickerDataSource.swift; sourceTree = "<group>"; };
+		0937F593218A241900A616C4 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		0937F599218A36BE00A616C4 /* PersonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewModel.swift; sourceTree = "<group>"; };
+		0937F59E218A578300A616C4 /* StarshipViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipViewModel.swift; sourceTree = "<group>"; };
+		0937F5A8218A664500A616C4 /* MeasurableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurableViewModel.swift; sourceTree = "<group>"; };
+		0937F5AA218A75F300A616C4 /* Measurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measurable.swift; sourceTree = "<group>"; };
+		0937F5AC218A7E7200A616C4 /* Priceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Priceable.swift; sourceTree = "<group>"; };
+		0937F5AE218A7F3900A616C4 /* PriceableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceableViewModel.swift; sourceTree = "<group>"; };
+		0937F5B0218A839100A616C4 /* VehicleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleViewModel.swift; sourceTree = "<group>"; };
+		0937F5B3218AB82300A616C4 /* NumberTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberTextFieldDelegate.swift; sourceTree = "<group>"; };
 		099CFD922187D64300DAA3BB /* TheApiAwakens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheApiAwakens.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		099CFD952187D64300DAA3BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		099CFD972187D64300DAA3BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -32,6 +66,8 @@
 		099CFD9F2187D64400DAA3BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		099CFDA12187D64400DAA3BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		099CFDAC2188FCC200DAA3BB /* StatsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsController.swift; sourceTree = "<group>"; };
+		09E622A7218B716D00CFD5DC /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
+		09E622AD218B79BE00CFD5DC /* KeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +81,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0937F58521892C0500A616C4 /* ExampleJson */ = {
+			isa = PBXGroup;
+			children = (
+				0937F58621892C2A00A616C4 /* people.json */,
+				0937F58821892C8100A616C4 /* starships.json */,
+				0937F58A21892CBC00A616C4 /* vehicles.json */,
+			);
+			path = ExampleJson;
+			sourceTree = "<group>";
+		};
+		0937F590218A22E800A616C4 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				0937F591218A23C100A616C4 /* ResourcePickerDataSource.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		0937F598218A368A00A616C4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				0937F599218A36BE00A616C4 /* PersonViewModel.swift */,
+				0937F59E218A578300A616C4 /* StarshipViewModel.swift */,
+				0937F5A8218A664500A616C4 /* MeasurableViewModel.swift */,
+				0937F5AE218A7F3900A616C4 /* PriceableViewModel.swift */,
+				0937F5B0218A839100A616C4 /* VehicleViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0937F5B2218AB7ED00A616C4 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				0937F5B3218AB82300A616C4 /* NumberTextFieldDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
 		099CFD892187D64300DAA3BB = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +138,11 @@
 		099CFD942187D64300DAA3BB /* TheApiAwakens */ = {
 			isa = PBXGroup;
 			children = (
+				09E622AC218B795500CFD5DC /* Utils */,
+				09E622A6218B714E00CFD5DC /* Extensions */,
+				0937F598218A368A00A616C4 /* ViewModels */,
+				0937F5B2218AB7ED00A616C4 /* Delegates */,
+				0937F590218A22E800A616C4 /* DataSources */,
 				099CFDA92187E46F00DAA3BB /* Views */,
 				099CFDA82187E44100DAA3BB /* Models */,
 				099CFDA72187E43900DAA3BB /* Controllers */,
@@ -81,6 +160,7 @@
 			children = (
 				099CFD972187D64300DAA3BB /* ViewController.swift */,
 				099CFDAC2188FCC200DAA3BB /* StatsController.swift */,
+				0937F58E2189587700A616C4 /* CategoryController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -88,10 +168,16 @@
 		099CFDA82187E44100DAA3BB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0937F58521892C0500A616C4 /* ExampleJson */,
 				0937F57B2189229300A616C4 /* Person.swift */,
 				0937F57D2189230200A616C4 /* Planet.swift */,
 				0937F57F218924F300A616C4 /* Starship.swift */,
 				0937F581218926FB00A616C4 /* Vehicle.swift */,
+				0937F583218929F200A616C4 /* Stub.swift */,
+				0937F58C218955CC00A616C4 /* Category.swift */,
+				0937F593218A241900A616C4 /* Resource.swift */,
+				0937F5AA218A75F300A616C4 /* Measurable.swift */,
+				0937F5AC218A7E7200A616C4 /* Priceable.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -101,6 +187,22 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		09E622A6218B714E00CFD5DC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				09E622A7218B716D00CFD5DC /* UITextFieldExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		09E622AC218B795500CFD5DC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				09E622AD218B79BE00CFD5DC /* KeyboardManager.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,8 +263,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0937F58721892C2A00A616C4 /* people.json in Resources */,
+				0937F58921892C8100A616C4 /* starships.json in Resources */,
 				099CFDA02187D64400DAA3BB /* LaunchScreen.storyboard in Resources */,
 				099CFD9D2187D64400DAA3BB /* Assets.xcassets in Resources */,
+				0937F58B21892CBC00A616C4 /* vehicles.json in Resources */,
 				099CFD9B2187D64300DAA3BB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,12 +280,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				099CFD982187D64300DAA3BB /* ViewController.swift in Sources */,
+				0937F58F2189587700A616C4 /* CategoryController.swift in Sources */,
+				0937F5AB218A75F300A616C4 /* Measurable.swift in Sources */,
 				099CFDAD2188FCC200DAA3BB /* StatsController.swift in Sources */,
 				0937F57C2189229300A616C4 /* Person.swift in Sources */,
+				0937F59A218A36BE00A616C4 /* PersonViewModel.swift in Sources */,
+				0937F5AD218A7E7200A616C4 /* Priceable.swift in Sources */,
+				0937F584218929F200A616C4 /* Stub.swift in Sources */,
+				0937F5A9218A664500A616C4 /* MeasurableViewModel.swift in Sources */,
 				0937F580218924F300A616C4 /* Starship.swift in Sources */,
+				0937F58D218955CC00A616C4 /* Category.swift in Sources */,
+				0937F59F218A578300A616C4 /* StarshipViewModel.swift in Sources */,
+				0937F5AF218A7F3900A616C4 /* PriceableViewModel.swift in Sources */,
 				0937F582218926FB00A616C4 /* Vehicle.swift in Sources */,
+				0937F5B1218A839100A616C4 /* VehicleViewModel.swift in Sources */,
 				099CFD962187D64300DAA3BB /* AppDelegate.swift in Sources */,
+				09E622A8218B716D00CFD5DC /* UITextFieldExtension.swift in Sources */,
+				0937F594218A241900A616C4 /* Resource.swift in Sources */,
+				09E622AE218B79BE00CFD5DC /* KeyboardManager.swift in Sources */,
+				0937F5B4218AB82300A616C4 /* NumberTextFieldDelegate.swift in Sources */,
 				0937F57E2189230200A616C4 /* Planet.swift in Sources */,
+				0937F592218A23C100A616C4 /* ResourcePickerDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

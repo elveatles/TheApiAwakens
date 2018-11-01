@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Starting view controller where the user can choose the category they want to see.
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -16,9 +17,25 @@ class ViewController: UIViewController {
         
         styleNavigationBar()
     }
-
-    @IBAction func categorySelected(_ sender: UIButton) {
-        performSegue(withIdentifier: "showCategory", sender: nil)
+    
+    @IBAction func selectCharacters() {
+        performSegue(withIdentifier: "showCategory", sender: Category.people)
+    }
+    
+    @IBAction func selectVehicles() {
+        performSegue(withIdentifier: "showCategory", sender: Category.vehicles)
+    }
+    
+    @IBAction func selectStarships() {
+        performSegue(withIdentifier: "showCategory", sender: Category.starships)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showCategory" {
+            // Assign the category to the destination view controller.
+            let controller = segue.destination as! CategoryController
+            controller.category = sender as! Category
+        }
     }
     
     /// Style the navigation bar for the navigation controller.
@@ -32,8 +49,14 @@ class ViewController: UIViewController {
         let backButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationItem.backBarButtonItem = backButton
         
-        // Change the color of the back button arrow in the navigation bar
+        // Change the color of the back button arrow
         navigationController?.navigationBar.tintColor = UIColor(white: 1.0, alpha: 0.5)
+        
+        // Change the size and color of the title
+        navigationController?.navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18, weight: .bold),
+            NSAttributedString.Key.foregroundColor: UIColor.white
+        ]
     }
 }
 
