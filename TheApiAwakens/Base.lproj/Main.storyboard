@@ -453,6 +453,7 @@
                                             <constraints>
                                                 <constraint firstItem="pIt-6x-Nrk" firstAttribute="top" secondItem="SPD-Uh-Idv" secondAttribute="top" constant="4" id="40i-JF-Dmk"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pIt-6x-Nrk" secondAttribute="trailing" constant="15" id="Bfw-GN-LQ5"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="sWW-vx-gj5" secondAttribute="bottom" constant="4" id="T2N-iE-x2i"/>
                                                 <constraint firstItem="pIt-6x-Nrk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sWW-vx-gj5" secondAttribute="trailing" constant="8" symbolic="YES" id="aMh-yE-42t"/>
                                                 <constraint firstItem="sWW-vx-gj5" firstAttribute="leading" secondItem="SPD-Uh-Idv" secondAttribute="leading" constant="16" id="cRV-Lj-7WY"/>
                                                 <constraint firstItem="pIt-6x-Nrk" firstAttribute="leading" secondItem="SPD-Uh-Idv" secondAttribute="leading" constant="108" id="fwp-9u-PKv"/>
@@ -485,6 +486,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="CPv-LG-zzW" secondAttribute="bottom" constant="4" id="1cI-Xk-o1l"/>
                                                 <constraint firstItem="nZ4-hm-cud" firstAttribute="leading" secondItem="ld6-3o-AAw" secondAttribute="leading" constant="16" id="6qr-ow-jw9"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="nZ4-hm-cud" secondAttribute="bottom" constant="8" id="SdC-V2-F8x"/>
                                                 <constraint firstItem="CPv-LG-zzW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="nZ4-hm-cud" secondAttribute="trailing" constant="8" symbolic="YES" id="YeX-Yb-cgB"/>
                                                 <constraint firstItem="CPv-LG-zzW" firstAttribute="top" secondItem="ld6-3o-AAw" secondAttribute="topMargin" constant="4" id="bej-Zh-H7u"/>
                                                 <constraint firstItem="CPv-LG-zzW" firstAttribute="leading" secondItem="ld6-3o-AAw" secondAttribute="leading" constant="108" id="gkB-EI-i2Q"/>
