@@ -200,16 +200,21 @@
                                 <color key="textColor" red="0.4811691642" green="0.8115724325" blue="0.9869298339" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Zm9-UZ-d0l">
+                                <rect key="frame" x="197" y="679" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.1019607843" green="0.12549019610000001" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="GqR-EV-hdZ" firstAttribute="trailing" secondItem="s97-fI-AQV" secondAttribute="trailing" id="2kb-iI-dD5"/>
+                            <constraint firstItem="Zm9-UZ-d0l" firstAttribute="centerY" secondItem="ZNL-38-37E" secondAttribute="centerY" id="5n5-6G-xZ6"/>
                             <constraint firstItem="GqR-EV-hdZ" firstAttribute="top" secondItem="rl5-SU-kvq" secondAttribute="bottom" constant="32" id="CWT-CA-78c"/>
                             <constraint firstItem="GqR-EV-hdZ" firstAttribute="leading" secondItem="s97-fI-AQV" secondAttribute="leading" id="FAK-op-7Bl"/>
                             <constraint firstItem="oMV-Jj-6i0" firstAttribute="leading" secondItem="s97-fI-AQV" secondAttribute="leading" id="Fvy-xo-xmD"/>
                             <constraint firstItem="rl5-SU-kvq" firstAttribute="top" secondItem="s97-fI-AQV" secondAttribute="top" constant="20" id="KV7-FX-Nhp"/>
                             <constraint firstItem="ZNL-38-37E" firstAttribute="top" secondItem="49W-zF-buy" secondAttribute="bottom" constant="8" id="RWE-fQ-rfg"/>
                             <constraint firstItem="ZNL-38-37E" firstAttribute="leading" secondItem="s97-fI-AQV" secondAttribute="leading" id="UpC-0S-IZq"/>
+                            <constraint firstItem="Zm9-UZ-d0l" firstAttribute="centerX" secondItem="ZNL-38-37E" secondAttribute="centerX" id="Uqb-7G-MKB"/>
                             <constraint firstItem="49W-zF-buy" firstAttribute="top" secondItem="GqR-EV-hdZ" secondAttribute="bottom" constant="8" id="VFK-3O-YDU"/>
                             <constraint firstItem="rl5-SU-kvq" firstAttribute="centerX" secondItem="srk-KI-jVV" secondAttribute="centerX" id="XAU-cR-3Xh"/>
                             <constraint firstItem="Ig5-uB-8kB" firstAttribute="top" secondItem="ZNL-38-37E" secondAttribute="bottom" id="YWu-zJ-oCF"/>
@@ -227,6 +232,7 @@
                         <viewLayoutGuide key="safeArea" id="s97-fI-AQV"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="Zm9-UZ-d0l" id="8HI-f3-Uhc"/>
                         <outlet property="exchangeRateLabel" destination="tDb-Ci-4GB" id="aDd-Lh-GBt"/>
                         <outlet property="exchangeRateTextField" destination="49W-zF-buy" id="oBo-BW-nuY"/>
                         <outlet property="largestLabel" destination="g0O-ab-6IJ" id="kKn-vG-c3h"/>

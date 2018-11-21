@@ -66,6 +66,7 @@ class ViewController: UIViewController {
         ]
     }
     
+    /// Completion handler for resource downloads
     private func resourceDownloadsCompleted(errors: [Error]) {
         if errors.count > 0 {
             // TODO: Show alert

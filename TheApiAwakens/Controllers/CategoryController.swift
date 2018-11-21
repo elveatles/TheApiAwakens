@@ -16,6 +16,7 @@ class CategoryController: UIViewController {
     @IBOutlet weak var resourcePicker: UIPickerView!
     @IBOutlet weak var smallestLabel: UILabel!
     @IBOutlet weak var largestLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     /// The category (person, starship, vehicle) chosen for this view controller.
     var category = Category.people
@@ -85,11 +86,15 @@ class CategoryController: UIViewController {
             exchangeRateTextField.text = "\(rate)"
         }
         
+        activityIndicator.hidesWhenStopped = true
+        
         // Assign callback method if resources are still downloading,
         // otherwise update with the cached resource downloads.
         if DownloadManager.isDownloading {
+            activityIndicator.startAnimating()
             DownloadManager.downloadCompletion = resourceDownloadsCompleted
         } else {
+            activityIndicator.stopAnimating()
             update()
         }
     }
@@ -176,7 +181,10 @@ class CategoryController: UIViewController {
         largestLabel.text = largestResource?.name
     }
     
+    /// Completion handler for resource downloads
     private func resourceDownloadsCompleted(errors: [Error]) {
+        activityIndicator.stopAnimating()
+        
         if errors.count > 0 {
             // TODO: Show errors
             print(errors)
