@@ -119,6 +119,15 @@ class CategoryController: UIViewController {
         
         // Make sure value is greater than 0
         guard rate > 0 else {
+            showAlert(title: "Exchange Rate", message: "Exchange rate should be greater than 0.")
+            // Change value back to old value
+            let oldRateOpt = UserDefaults.standard.value(forKey: "creditsToUsdRate") as? Float
+            var oldRate = oldRateOpt ?? 1.0
+            // Extra safety
+            if oldRate <= 0.0 {
+                oldRate = 1.0
+            }
+            exchangeRateTextField.text = "\(oldRate)"
             return
         }
         
@@ -179,6 +188,19 @@ class CategoryController: UIViewController {
         stats.showResource(resource)
         smallestLabel.text = smallestResource?.name
         largestLabel.text = largestResource?.name
+    }
+    
+    /**
+     Convenience function for showing an alert.
+     
+     - Parameter title: The title of the alert.
+     - Parameter message: The alert message.
+    */
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(ok)
+        present(alert, animated: true, completion: nil)
     }
     
     /// Completion handler for resource downloads
