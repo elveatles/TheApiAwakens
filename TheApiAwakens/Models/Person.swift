@@ -17,7 +17,7 @@ struct Person: Codable, Resource, Measurable {
     /// The URL of a planet resource, a planet that this person was born on or inhabits.
     let homeworld: URL
     /// The height of the person in centimeters.
-    let height: Int
+    let height: String
     /// The eye color of this person. Will be "unknown" if not known or "n/a" if the person does not have an eye.
     let eyeColor: String
     /// The hair color of this person. Will be "unknown" if not known or "n/a" if the person does not have hair.
@@ -26,13 +26,27 @@ struct Person: Codable, Resource, Measurable {
     let starships: [URL]
     /// An array of vehicle resource URLs that this person has piloted.
     let vehicles: [URL]
+    /// The hypermedia URL of this resource
+    let url: URL
 
     /// Data retrieved from the homeworld URL.
     var homeworldObject: Planet?
     var starshipObjects = [Starship]()
     var vehicleObjects = [Vehicle]()
     
-    init(name: String, birthYear: String, homeworld: URL, height: Int, eyeColor: String, hairColor: String, starships: [URL], vehicles: [URL]) {
+    enum CodingKeys: String, CodingKey {
+        case name
+        case birthYear
+        case homeworld
+        case height
+        case eyeColor
+        case hairColor
+        case starships
+        case vehicles
+        case url
+    }
+    
+    init(name: String, birthYear: String, homeworld: URL, height: String, eyeColor: String, hairColor: String, starships: [URL], vehicles: [URL], url: URL) {
         self.name = name
         self.birthYear = birthYear
         self.homeworld = homeworld
@@ -41,13 +55,18 @@ struct Person: Codable, Resource, Measurable {
         self.hairColor = hairColor
         self.starships = starships
         self.vehicles = vehicles
+        self.url = url
     }
     
     var measurableLengthUnits: UnitLength {
         return .centimeters
     }
     
-    var measurableLength: Double {
+    var measurableLength: Double? {
         return Double(height)
+    }
+    
+    var measurableLengthString: String {
+        return height
     }
 }

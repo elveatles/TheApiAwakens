@@ -12,4 +12,6 @@ import Foundation
 protocol Resource {
     /// The name of the resource
     var name: String { get }
+    /// The hypermedia URL of this resource
+    var url: URL { get }
 }

@@ -16,6 +16,13 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         styleNavigationBar()
+        // Download resources and cache them
+        DownloadManager.downloadCompletion = resourceDownloadsCompleted
+        DownloadManager.downloadAllResources()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        DownloadManager.downloadCompletion = resourceDownloadsCompleted
     }
     
     @IBAction func selectCharacters() {
@@ -57,6 +64,13 @@ class ViewController: UIViewController {
             NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18, weight: .bold),
             NSAttributedString.Key.foregroundColor: UIColor.white
         ]
+    }
+    
+    private func resourceDownloadsCompleted(errors: [Error]) {
+        if errors.count > 0 {
+            // TODO: Show alert
+            print(errors)
+        }
     }
 }
 

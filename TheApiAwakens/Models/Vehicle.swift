@@ -17,26 +17,33 @@ struct Vehicle: Codable, Resource, Measurable, Priceable {
     /// The cost of this vehicle new, in Galactic Credits. Can be "unknown".
     let costInCredits: String
     /// The length of this vehicle in meters.
-    let length: Float
+    let length: String
     /// The class of this vehicle, such as "Wheeled" or "Repulsorcraft".
     let vehicleClass: String
     /// The number of personnel needed to run or pilot this vehicle.
-    let crew: Int
+    let crew: String
+    /// The hypermedia URL of this resource
+    let url: URL
     
-    init(name: String, model: String, costInCredits: String, length: Float, vehicleClass: String, crew: Int) {
+    init(name: String, model: String, costInCredits: String, length: String, vehicleClass: String, crew: String, url: URL) {
         self.name = name
         self.model = model
         self.costInCredits = costInCredits
         self.length = length
         self.vehicleClass = vehicleClass
         self.crew = crew
+        self.url = url
     }
     
     var measurableLengthUnits: UnitLength {
         return .meters
     }
     
-    var measurableLength: Double {
+    var measurableLength: Double? {
         return Double(length)
+    }
+    
+    var measurableLengthString: String {
+        return length
     }
 }

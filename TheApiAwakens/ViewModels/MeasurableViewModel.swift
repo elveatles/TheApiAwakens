@@ -21,23 +21,33 @@ struct MeasurableViewModel {
     }()
     
     private let lengthUnits: UnitLength
-    private let length: Double
+    private let length: Double?
+    private let lengthString: String
     
     init(measurable: Measurable) {
         self.length = measurable.measurableLength
+        self.lengthString = measurable.measurableLengthString
         self.lengthUnits = measurable.measurableLengthUnits
     }
     
     /// Height in metric units
     var lengthInMetricUnits: String {
-        let centimeters = Measurement(value: length, unit: lengthUnits)
+        guard let len = length else {
+            return lengthString
+        }
+        
+        let centimeters = Measurement(value: len, unit: lengthUnits)
         let meters = centimeters.converted(to: UnitLength.meters)
         return MeasurableViewModel.lengthFormatter.string(from: meters)
     }
     
     /// Height in English units
     var lengthInEnglishUnits: String {
-        let centimeters = Measurement(value: length, unit: lengthUnits)
+        guard let len = length else {
+            return lengthString
+        }
+        
+        let centimeters = Measurement(value: len, unit: lengthUnits)
         let feet = centimeters.converted(to: UnitLength.feet)
         return MeasurableViewModel.lengthFormatter.string(from: feet)
     }

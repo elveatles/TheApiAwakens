@@ -36,22 +36,25 @@ class CategoryController: UIViewController {
     /// The smallest resource. nil if current resources are not Measurable. nil if there are no resources.
     var smallestResource: Resource? {
         // Get current resources as Measurable objects
-        guard let measurables = resourcePickerDataSource.data as? [Measurable] else {
+        guard var measurables = resourcePickerDataSource.data as? [Measurable] else {
             return nil
         }
         
-        let result = measurables.min { $0.measurableLength < $1.measurableLength }
+        measurables = measurables.filter { $0.measurableLength != nil }
+        // Force unwrapping because the line above filters out nil values
+        let result = measurables.min { $0.measurableLength! < $1.measurableLength! }
         return result as? Resource
     }
     
     /// The largest resource. nil if current resources are not Measurable. nil if there are no resources.
     var largestResource: Resource? {
         // Get current resources as Measurable objects
-        guard let measurables = resourcePickerDataSource.data as? [Measurable] else {
+        guard var measurables = resourcePickerDataSource.data as? [Measurable] else {
             return nil
         }
         
-        let result = measurables.max { $0.measurableLength < $1.measurableLength }
+        measurables = measurables.filter { $0.measurableLength != nil }
+        let result = measurables.max { $0.measurableLength! < $1.measurableLength! }
         return result as? Resource
     }
     
@@ -81,7 +84,13 @@ class CategoryController: UIViewController {
             statsController.creditsToUsdRate = rate
         }
         
-        query()
+        // Assign callback method if resources are still downloading,
+        // otherwise update with the cached resource downloads.
+        if DownloadManager.isDownloading {
+            DownloadManager.downloadCompletion = resourceDownloadsCompleted
+        } else {
+            update()
+        }
     }
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -127,25 +136,23 @@ class CategoryController: UIViewController {
     }
     
     /**
-     Query resources from the Star Wars API.
-    */
-    func query() {
-        switch category {
-        case .people: update(resources: Stub.people)
-        case .starships: update(resources: Stub.starships)
-        case .vehicles: update(resources: Stub.vehicles)
-        }
-    }
-    
-    /**
      Update this view controller with new resources.
-     
-     - Parameter resources: The resources to update with.
     */
-    func update(resources: [Resource]) {
-        resourcePickerDataSource.data = resources
+    func update() {
+        // Assign picker data based on category
+        switch category {
+        case .people:
+            resourcePickerDataSource.data = Cache.people.values.sorted { $0.name < $1.name }
+        case .starships:
+            resourcePickerDataSource.data = Cache.starships.values.sorted { $0.name < $1.name }
+        case .vehicles:
+            resourcePickerDataSource.data = Cache.vehicles.values.sorted { $0.name < $1.name }
+        }
         
-        if let first = resources.first {
+        // resourcePickerDataSource.data = resources
+        resourcePicker.reloadAllComponents()
+        
+        if let first = resourcePickerDataSource.data.first {
             showResource(first)
         }
     }
@@ -167,6 +174,15 @@ class CategoryController: UIViewController {
         smallestLabel.text = smallestResource?.name
         largestLabel.text = largestResource?.name
     }
+    
+    private func resourceDownloadsCompleted(errors: [Error]) {
+        if errors.count > 0 {
+            // TODO: Show errors
+            print(errors)
+        } else {
+            update()
+        }
+    }
 }
 
 extension CategoryController: UIPickerViewDelegate {
@@ -175,6 +191,10 @@ extension CategoryController: UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        guard resourcePickerDataSource.data.count > 0 else {
+            return
+        }
+        
         let resource = resourcePickerDataSource.data[row]
         showResource(resource)
     }

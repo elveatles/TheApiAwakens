@@ -13,5 +13,7 @@ protocol Measurable {
     /// The units that measurableLength is in.
     var measurableLengthUnits: UnitLength { get }
     /// The length of this object.
-    var measurableLength: Double { get }
+    var measurableLength: Double? { get }
+    /// The length as a string. Can be "unknown"
+    var measurableLengthString: String { get }
 }

@@ -17,26 +17,33 @@ struct Starship: Codable, Resource, Measurable, Priceable {
     /// The cost of this starship new, in galactic credits. Can be "unknown".
     let costInCredits: String
     /// The length of this starship in meters.
-    let length: Float
+    let length: String
     /// The class of this starship, such as "Starfighter" or "Deep Space Mobile Battlestation"
     let starshipClass: String
     /// The number of personnel needed to run or pilot this starship.
-    let crew: Int
+    let crew: String
+    /// The hypermedia URL of this resource
+    let url: URL
     
-    init(name: String, model: String, costInCredits: String, length: Float, starshipClass: String, crew: Int) {
+    init(name: String, model: String, costInCredits: String, length: String, starshipClass: String, crew: String, url: URL) {
         self.name = name
         self.model = model
         self.costInCredits = costInCredits
         self.length = length
         self.starshipClass = starshipClass
         self.crew = crew
+        self.url = url
     }
     
     var measurableLengthUnits: UnitLength {
         return .meters
     }
     
-    var measurableLength: Double {
+    var measurableLength: Double? {
         return Double(length)
+    }
+    
+    var measurableLengthString: String {
+        return length
     }
 }

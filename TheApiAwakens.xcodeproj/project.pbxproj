@@ -33,6 +33,12 @@
 		099CFD9D2187D64400DAA3BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 099CFD9C2187D64400DAA3BB /* Assets.xcassets */; };
 		099CFDA02187D64400DAA3BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 099CFD9E2187D64400DAA3BB /* LaunchScreen.storyboard */; };
 		099CFDAD2188FCC200DAA3BB /* StatsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CFDAC2188FCC200DAA3BB /* StatsController.swift */; };
+		09A4E35421A37F0700793F37 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A4E35321A37F0700793F37 /* Endpoint.swift */; };
+		09A4E35921A3BE9D00793F37 /* SwapiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A4E35821A3BE9D00793F37 /* SwapiClient.swift */; };
+		09A4E35B21A3C06C00793F37 /* SwapiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A4E35A21A3C06C00793F37 /* SwapiError.swift */; };
+		09A4E35F21A3C71D00793F37 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A4E35E21A3C71D00793F37 /* Page.swift */; };
+		09A4E36121A4A02500793F37 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A4E36021A4A02500793F37 /* Cache.swift */; };
+		09A4E36321A4AF0900793F37 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A4E36221A4AF0900793F37 /* DownloadManager.swift */; };
 		09E622A8218B716D00CFD5DC /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E622A7218B716D00CFD5DC /* UITextFieldExtension.swift */; };
 		09E622AE218B79BE00CFD5DC /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E622AD218B79BE00CFD5DC /* KeyboardManager.swift */; };
 /* End PBXBuildFile section */
@@ -66,6 +72,12 @@
 		099CFD9F2187D64400DAA3BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		099CFDA12187D64400DAA3BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		099CFDAC2188FCC200DAA3BB /* StatsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsController.swift; sourceTree = "<group>"; };
+		09A4E35321A37F0700793F37 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		09A4E35821A3BE9D00793F37 /* SwapiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapiClient.swift; sourceTree = "<group>"; };
+		09A4E35A21A3C06C00793F37 /* SwapiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapiError.swift; sourceTree = "<group>"; };
+		09A4E35E21A3C71D00793F37 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		09A4E36021A4A02500793F37 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		09A4E36221A4AF0900793F37 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		09E622A7218B716D00CFD5DC /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		09E622AD218B79BE00CFD5DC /* KeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,6 +150,7 @@
 		099CFD942187D64300DAA3BB /* TheApiAwakens */ = {
 			isa = PBXGroup;
 			children = (
+				09A4E35521A3BD8100793F37 /* Networking */,
 				09E622AC218B795500CFD5DC /* Utils */,
 				09E622A6218B714E00CFD5DC /* Extensions */,
 				0937F598218A368A00A616C4 /* ViewModels */,
@@ -159,8 +172,8 @@
 			isa = PBXGroup;
 			children = (
 				099CFD972187D64300DAA3BB /* ViewController.swift */,
-				099CFDAC2188FCC200DAA3BB /* StatsController.swift */,
 				0937F58E2189587700A616C4 /* CategoryController.swift */,
+				099CFDAC2188FCC200DAA3BB /* StatsController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -168,6 +181,7 @@
 		099CFDA82187E44100DAA3BB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				09A4E35221A37E7300793F37 /* Endpoint */,
 				0937F58521892C0500A616C4 /* ExampleJson */,
 				0937F57B2189229300A616C4 /* Person.swift */,
 				0937F57D2189230200A616C4 /* Planet.swift */,
@@ -178,6 +192,8 @@
 				0937F593218A241900A616C4 /* Resource.swift */,
 				0937F5AA218A75F300A616C4 /* Measurable.swift */,
 				0937F5AC218A7E7200A616C4 /* Priceable.swift */,
+				09A4E35E21A3C71D00793F37 /* Page.swift */,
+				09A4E36021A4A02500793F37 /* Cache.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -187,6 +203,24 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		09A4E35221A37E7300793F37 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				09A4E35321A37F0700793F37 /* Endpoint.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		09A4E35521A3BD8100793F37 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				09A4E35821A3BE9D00793F37 /* SwapiClient.swift */,
+				09A4E35A21A3C06C00793F37 /* SwapiError.swift */,
+				09A4E36221A4AF0900793F37 /* DownloadManager.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		09E622A6218B714E00CFD5DC /* Extensions */ = {
@@ -289,18 +323,24 @@
 				0937F584218929F200A616C4 /* Stub.swift in Sources */,
 				0937F5A9218A664500A616C4 /* MeasurableViewModel.swift in Sources */,
 				0937F580218924F300A616C4 /* Starship.swift in Sources */,
+				09A4E36121A4A02500793F37 /* Cache.swift in Sources */,
 				0937F58D218955CC00A616C4 /* Category.swift in Sources */,
 				0937F59F218A578300A616C4 /* StarshipViewModel.swift in Sources */,
+				09A4E35F21A3C71D00793F37 /* Page.swift in Sources */,
 				0937F5AF218A7F3900A616C4 /* PriceableViewModel.swift in Sources */,
+				09A4E35B21A3C06C00793F37 /* SwapiError.swift in Sources */,
 				0937F582218926FB00A616C4 /* Vehicle.swift in Sources */,
 				0937F5B1218A839100A616C4 /* VehicleViewModel.swift in Sources */,
 				099CFD962187D64300DAA3BB /* AppDelegate.swift in Sources */,
 				09E622A8218B716D00CFD5DC /* UITextFieldExtension.swift in Sources */,
+				09A4E35421A37F0700793F37 /* Endpoint.swift in Sources */,
 				0937F594218A241900A616C4 /* Resource.swift in Sources */,
 				09E622AE218B79BE00CFD5DC /* KeyboardManager.swift in Sources */,
 				0937F5B4218AB82300A616C4 /* NumberTextFieldDelegate.swift in Sources */,
 				0937F57E2189230200A616C4 /* Planet.swift in Sources */,
 				0937F592218A23C100A616C4 /* ResourcePickerDataSource.swift in Sources */,
+				09A4E35921A3BE9D00793F37 /* SwapiClient.swift in Sources */,
+				09A4E36321A4AF0900793F37 /* DownloadManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

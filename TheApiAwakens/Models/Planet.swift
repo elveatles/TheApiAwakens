@@ -12,8 +12,11 @@ import Foundation
 struct Planet: Codable, Resource {
     /// The name of this planet.
     let name: String
+    /// The hypermedia URL of this resource
+    let url: URL
     
-    init(name: String) {
+    init(name: String, url: URL) {
         self.name = name
+        self.url = url
     }
 }
