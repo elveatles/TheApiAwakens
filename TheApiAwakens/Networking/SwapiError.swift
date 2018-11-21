@@ -13,5 +13,5 @@ enum SwapiError: Error {
     /// Error if HTTP status code can not be pulled from API response
     case requestFailed
     /// Error if API response has an error code
-    case invalidData
+    case responseUnsuccessful
 }

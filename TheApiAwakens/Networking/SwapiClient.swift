@@ -114,7 +114,7 @@ class SwapiClient {
                             completion(nil, error)
                         }
                     } else {
-                        completion(nil, SwapiError.invalidData)
+                        completion(nil, SwapiError.responseUnsuccessful)
                     }
                 } else if let error = error {
                     completion(nil, error)
