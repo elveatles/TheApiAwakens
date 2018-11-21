@@ -15,3 +15,12 @@ enum SwapiError: Error {
     /// Error if API response has an error code
     case responseUnsuccessful
 }
+
+extension SwapiError: LocalizedError {
+    var errorDescription: String? {
+        switch self {
+        case .requestFailed: return "Request Failed."
+        case .responseUnsuccessful: return "Response Unsuccessful."
+        }
+    }
+}

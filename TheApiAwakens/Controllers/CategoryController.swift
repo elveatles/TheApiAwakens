@@ -207,9 +207,9 @@ class CategoryController: UIViewController {
     private func resourceDownloadsCompleted(errors: [Error]) {
         activityIndicator.stopAnimating()
         
-        if errors.count > 0 {
-            // TODO: Show errors
-            print(errors)
+        // Only show an alert for one of the errors otherwise the alert will get too cluttered.
+        if let error = errors.first {
+            showAlert(title: "Resources Download Failed", message: error.localizedDescription)
         } else {
             update()
         }

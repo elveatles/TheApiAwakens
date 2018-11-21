@@ -45,6 +45,19 @@ class ViewController: UIViewController {
         }
     }
     
+    /**
+     Convenience function for showing an alert.
+     
+     - Parameter title: The title of the alert.
+     - Parameter message: The alert message.
+     */
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(ok)
+        present(alert, animated: true, completion: nil)
+    }
+    
     /// Style the navigation bar for the navigation controller.
     private func styleNavigationBar() {
         // Make navigation bar background invisible
@@ -68,9 +81,9 @@ class ViewController: UIViewController {
     
     /// Completion handler for resource downloads
     private func resourceDownloadsCompleted(errors: [Error]) {
-        if errors.count > 0 {
-            // TODO: Show alert
-            print(errors)
+        // Only show an alert for one of the errors otherwise the alert will get too cluttered.
+        if let error = errors.first {
+            showAlert(title: "Resources Download Failed", message: error.localizedDescription)
         }
     }
 }
