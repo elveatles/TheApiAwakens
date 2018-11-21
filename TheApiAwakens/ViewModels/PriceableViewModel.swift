@@ -31,7 +31,7 @@ struct PriceableViewModel {
     */
     func getCostInUsd(rate: Float) -> String? {
         guard let cost = Float(costInCredits) else {
-            return nil
+            return costInCredits
         }
         
         guard rate > 0 else {
