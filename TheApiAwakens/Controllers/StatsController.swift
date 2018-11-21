@@ -52,6 +52,15 @@ class StatsController: UITableViewController {
         styleSegmentedControl(costSegmentedControl)
         styleSegmentedControl(lengthSegmentedControl)
         
+        // Make values question marks when a resource has not been shown yet
+        cell0ValueLabel.text = "???"
+        cell1ValueLabel.text = "???"
+        cell2ValueLabel.text = "???"
+        cell3ValueLabel.text = "???"
+        cell4ValueLabel.text = "???"
+        vehiclesValueLabel.text = "???"
+        starshipsValueLabel.text = "???"
+        
         if category != .people {
             vehiclesCell.isHidden = true
             starshipsCell.isHidden = true
