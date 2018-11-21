@@ -38,8 +38,6 @@ class StatsController: UITableViewController {
     @IBOutlet weak var starshipsValueLabel: UILabel!
     
     var category = Category.people
-    /// The exchange rate of credits to USD
-    var creditsToUsdRate: Float = 0.5
     /// The current resource (Person, Starship, Vehicle)
     private var currentResource: Resource?
     
@@ -183,7 +181,9 @@ class StatsController: UITableViewController {
         let viewModel = PriceableViewModel(priceable: priceable)
         
         if costSegmentedControl.selectedSegmentIndex == CostIndex.usd.rawValue {
-            cell1ValueLabel.text = viewModel.getCostInUsd(rate: creditsToUsdRate)
+            let creditsToUsdRate = UserDefaults.standard.value(forKey: "creditsToUsdRate") as? Float
+            let rate = creditsToUsdRate ?? 4.0
+            cell1ValueLabel.text = viewModel.getCostInUsd(rate: rate)
         } else {
             cell1ValueLabel.text = viewModel.costInCredits
         }

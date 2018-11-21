@@ -80,8 +80,9 @@ class CategoryController: UIViewController {
         exchangeRateTextField.addDoneButton(target: self, action: #selector(keyboardDone))
         exchangeRateLabel.isHidden = category == .people
         exchangeRateTextField.isHidden = category == .people
-        if let rate = exchangeRate {
-            statsController.creditsToUsdRate = rate
+        
+        if let rate = UserDefaults.standard.value(forKey: "creditsToUsdRate") as? Float {
+            exchangeRateTextField.text = "\(rate)"
         }
         
         // Assign callback method if resources are still downloading,
@@ -116,7 +117,7 @@ class CategoryController: UIViewController {
             return
         }
         
-        statsController.creditsToUsdRate = rate
+        UserDefaults.standard.set(rate, forKey: "creditsToUsdRate")
         statsController.updateCost()
     }
     
